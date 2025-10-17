@@ -1,73 +1,76 @@
-# Welcome to your Lovable project
+# Ayushman Singh – Portfolio
 
-## Project info
+[Live Demo](https://ayushmansingh-portfolio.lovable.app/)  
 
-**URL**: https://lovable.dev/projects/212518cc-1cc6-4c76-8256-e82e1189b987
+Hi! I’m **Ayushman Singh**, a B.Tech student in **Computer Science and Engineering – Data Science specialization**, passionate about building **AI/ML solutions** and **full-stack applications**. I love solving real-world problems, creating innovative projects, and continuously learning new technologies.
 
-## How can I edit this code?
+---
 
-There are several ways of editing your application.
+## 👨‍💻 About Me
+- Motivated and aspiring **Software Developer** with strong problem-solving skills.  
+- Skilled in **Python, C++, Java**, and **data structures & algorithms**.  
+- Experienced with **full-stack development**, **AI/ML**, and **data analysis**.  
+- Passionate about building real-world projects that have practical applications.
 
-**Use Lovable**
+---
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/212518cc-1cc6-4c76-8256-e82e1189b987) and start prompting.
+## 🛠️ Technical Skills
+**Programming Languages:** Python, C++, Java  
+**Web Development:** HTML, CSS, JavaScript, React (learning), Flask, REST APIs  
+**Machine Learning / Deep Learning:** scikit-learn, TensorFlow, Keras, PyTorch  
+**Data Analysis & Visualization:** Pandas, NumPy, Matplotlib, Seaborn  
+**Tools & Platforms:** Git, GitHub, Jupyter Notebook, Google Colab, MySQL, Microsoft Excel  
 
-Changes made via Lovable will be committed automatically to this repo.
+---
 
-**Use your preferred IDE**
+## 📂 Projects
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+### 1. Driver Motion Detector (AI + Computer Vision)  
+- Real-time drowsiness detection system using **Python**, **OpenCV**, and **MediaPipe**.  
+- Automated alerts and safety protocols to enhance driving safety.  
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+### 2. Inventory & Order Management System  
+- Full-stack web application using **React**, **Python**, and **MySQL**.  
+- Efficient management of inventory, orders, and sales.  
 
-Follow these steps:
+### 3. Blog / Content Management System  
+- Dynamic platform for creating, editing, and publishing blogs using **Python** and **MySQL**.  
+- Modern web interface for easy content management.  
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+*For more projects, visit my [GitHub](https://github.com/Ayushman-S-ingh)*
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+---
 
-# Step 3: Install the necessary dependencies.
-npm i
+## 🎓 Education
+- **B.Tech in Computer Science & Engineering – Data Science**, Noida Institute of Engineering and Technology (Expected Graduation: Aug 2026)  
+- **Intermediate**, Harsh Chandra Inter College, 2021 – 70%  
+- **High School**, Harsh Chandra Inter College, 2019 – 78%  
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
+---
 
-**Edit a file directly in GitHub**
+## 💼 Experience
+- **Data Analytics Intern** – YBI Foundation (Oct 2023 – Nov 2023)  
+  - Worked on **data cleaning, analysis, and visualization** using Python and Excel.  
+  - Gained hands-on experience with **Exploratory Data Analysis (EDA)** techniques.
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+---
 
-**Use GitHub Codespaces**
+## 📬 Contact
+- **Email:** ayushmansingh40013@gmail.com  
+- **Phone:** +91 7380625760  
+- **GitHub:** [@Ayushman-S-ingh](https://github.com/Ayushman-S-ingh)  
+- **LinkedIn:** [@Ayushman--singh](https://www.linkedin.com/in/ayushman--singh/)  
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+---
 
-## What technologies are used for this project?
+## 🌐 Portfolio
+Check out my portfolio: [https://ayushmansingh-portfolio.lovable.app/](https://ayushmansingh-portfolio.lovable.app/)  
 
-This project is built with:
+---
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+## ⭐ Achievements
+- Developed and tested **real-time AI applications**.  
+- Actively building a portfolio of projects using Python, AI/ML, and full-stack technologies.  
 
-## How can I deploy this project?
+---
 
-Simply open [Lovable](https://lovable.dev/projects/212518cc-1cc6-4c76-8256-e82e1189b987) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
