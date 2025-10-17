@@ -3,6 +3,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
+import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import { 
   Mail, 
   Phone, 
@@ -20,6 +21,7 @@ import {
 } from "lucide-react";
 import { toast } from "@/hooks/use-toast";
 import { useState } from "react";
+import profileImage from "@/assets/profile.jpg";
 
 const Index = () => {
   const [formData, setFormData] = useState({
@@ -148,9 +150,10 @@ const Index = () => {
               <div className="relative w-full max-w-md mx-auto">
                 <div className="aspect-square rounded-full bg-gradient-to-br from-primary to-accent opacity-20 absolute inset-0 animate-float"></div>
                 <div className="relative aspect-square rounded-full bg-card border-4 border-primary/20 shadow-2xl overflow-hidden">
-                  <div className="absolute inset-0 flex items-center justify-center text-muted-foreground">
-                    <Code2 className="w-32 h-32" />
-                  </div>
+                  <Avatar className="w-full h-full rounded-full">
+                    <AvatarImage src={profileImage} alt="Ayushman Singh" className="object-cover" />
+                    <AvatarFallback>AS</AvatarFallback>
+                  </Avatar>
                 </div>
                 <div className="absolute top-4 right-4 bg-card p-4 rounded-2xl shadow-lg animate-slide-in">
                   <div className="text-3xl font-bold text-primary">3</div>
