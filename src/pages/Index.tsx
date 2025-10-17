@@ -116,9 +116,11 @@ const Index = () => {
                 and creating innovative solutions.
               </p>
               <div className="flex flex-wrap gap-4 pt-4">
-                <Button size="lg" className="gap-2">
-                  <Download className="w-4 h-4" />
-                  View Resume
+                <Button size="lg" className="gap-2" asChild>
+                  <a href="/Ayushman_Singh_Resume.pdf" download="Ayushman_Singh_Resume.pdf">
+                    <Download className="w-4 h-4" />
+                    View Resume
+                  </a>
                 </Button>
                 <Button size="lg" variant="outline" onClick={() => scrollToSection("projects")}>
                   View Portfolio
