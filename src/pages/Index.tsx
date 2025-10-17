@@ -151,7 +151,7 @@ const Index = () => {
                   </div>
                 </div>
                 <div className="absolute top-4 right-4 bg-card p-4 rounded-2xl shadow-lg animate-slide-in">
-                  <div className="text-3xl font-bold text-primary">12+</div>
+                  <div className="text-3xl font-bold text-primary">3</div>
                   <div className="text-sm text-muted-foreground">Projects</div>
                 </div>
                 <div className="absolute bottom-8 left-4 bg-card p-4 rounded-2xl shadow-lg animate-slide-in">
