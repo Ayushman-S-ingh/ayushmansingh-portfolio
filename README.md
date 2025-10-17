@@ -70,7 +70,7 @@ Check out my portfolio: [https://ayushmansingh-portfolio.lovable.app/](https://a
 
 ## ⭐ Achievements
 - Developed and tested **real-time AI applications**.  
-- Actively building a portfolio of projects using Python, AI/ML, and full-stack technologies.  
+- Continuously developing innovative projects in Python, AI/ML, and full-stack development.
 
 ---
 
