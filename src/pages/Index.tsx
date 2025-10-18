@@ -23,6 +23,7 @@ import {
 import { toast } from "@/hooks/use-toast";
 import { useState } from "react";
 import profileImage from "@/assets/profile.jpg";
+import inventorySystemImage from "@/assets/inventory-system.png";
 import emailjs from "@emailjs/browser";
 import { z } from "zod";
 
@@ -121,6 +122,7 @@ const Index = () => {
       description: "Comprehensive management system using React, Python, and MySQL for efficient inventory tracking and order processing.",
       tech: ["React", "Python", "MySQL", "REST APIs"],
       icon: Database,
+      image: inventorySystemImage,
     },
     {
       title: "Blog CMS Platform",
@@ -380,9 +382,19 @@ const Index = () => {
             {projects.map((project, index) => (
               <Card key={index} className="border-2 hover:border-primary transition-all duration-300 hover:shadow-xl group overflow-hidden">
                 <CardContent className="p-0">
-                  <div className="bg-gradient-to-br from-primary/20 to-accent/20 p-12 flex items-center justify-center group-hover:from-primary/30 group-hover:to-accent/30 transition-all">
-                    <project.icon className="w-20 h-20 text-primary" />
-                  </div>
+                  {project.image ? (
+                    <div className="relative h-48 overflow-hidden">
+                      <img
+                        src={project.image}
+                        alt={project.title}
+                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                      />
+                    </div>
+                  ) : (
+                    <div className="bg-gradient-to-br from-primary/20 to-accent/20 p-12 flex items-center justify-center group-hover:from-primary/30 group-hover:to-accent/30 transition-all">
+                      <project.icon className="w-20 h-20 text-primary" />
+                    </div>
+                  )}
                   <div className="p-6 space-y-4">
                     <div>
                       <Badge variant="secondary" className="mb-2">{project.category}</Badge>
