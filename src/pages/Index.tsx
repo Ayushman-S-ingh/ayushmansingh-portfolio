@@ -4,6 +4,7 @@ import { Badge } from "@/components/ui/badge";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
+import { Link } from "react-router-dom";
 import { 
   Mail, 
   Phone, 
@@ -112,6 +113,7 @@ const Index = () => {
 
   const projects = [
     {
+      id: "driver-drowsiness",
       title: "Driver Drowsiness Detector",
       category: "AI + Computer Vision",
       description: "Real-time drowsiness detection system with Python, OpenCV, and MediaPipe featuring automated alerts for driver safety.",
@@ -120,6 +122,7 @@ const Index = () => {
       image: driverDrowsinessImage,
     },
     {
+      id: "inventory-management",
       title: "Inventory & Order Management",
       category: "Full-Stack Application",
       description: "Comprehensive management system using React, Python, and MySQL for efficient inventory tracking and order processing.",
@@ -128,6 +131,7 @@ const Index = () => {
       image: inventorySystemImage,
     },
     {
+      id: "blog-cms",
       title: "Blog CMS Platform",
       category: "Content Management",
       description: "Dynamic platform for creating, managing, and publishing blog content with Python backend and MySQL database.",
@@ -412,10 +416,12 @@ const Index = () => {
                         </Badge>
                       ))}
                     </div>
-                    <Button variant="ghost" className="w-full gap-2 group-hover:bg-primary group-hover:text-primary-foreground transition-all">
-                      View Details
-                      <ExternalLink className="w-4 h-4" />
-                    </Button>
+                    <Link to={`/project/${project.id}`}>
+                      <Button variant="ghost" className="w-full gap-2 group-hover:bg-primary group-hover:text-primary-foreground transition-all">
+                        View Details
+                        <ExternalLink className="w-4 h-4" />
+                      </Button>
+                    </Link>
                   </div>
                 </CardContent>
               </Card>
