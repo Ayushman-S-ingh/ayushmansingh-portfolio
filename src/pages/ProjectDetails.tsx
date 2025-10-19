@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { useParams, useNavigate } from "react-router-dom";
+import { useEffect } from "react";
 import { ArrowLeft, ExternalLink, Github } from "lucide-react";
 import driverDrowsinessImage from "@/assets/driver-drowsiness.png";
 import inventorySystemImage from "@/assets/inventory-system.png";
@@ -132,6 +133,10 @@ const ProjectDetails = () => {
   const navigate = useNavigate();
   
   const project = projectId ? projectsData[projectId as keyof typeof projectsData] : null;
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [projectId]);
 
   if (!project) {
     return (
