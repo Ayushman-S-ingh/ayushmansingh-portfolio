@@ -24,6 +24,7 @@ import { toast } from "@/hooks/use-toast";
 import { useState } from "react";
 import profileImage from "@/assets/profile.jpg";
 import inventorySystemImage from "@/assets/inventory-system.png";
+import blogCmsImage from "@/assets/blog-cms.png";
 import emailjs from "@emailjs/browser";
 import { z } from "zod";
 
@@ -130,6 +131,7 @@ const Index = () => {
       description: "Dynamic platform for creating, managing, and publishing blog content with Python backend and MySQL database.",
       tech: ["Python", "MySQL", "Flask", "HTML/CSS"],
       icon: Globe,
+      image: blogCmsImage,
     },
   ];
 
