@@ -598,7 +598,7 @@ const Index = () => {
       <footer className="bg-secondary/30 py-8 px-6">
         <div className="container mx-auto text-center">
           <p className="text-muted-foreground">
-            © 2024 Ayushman Singh. All rights reserved.
+            © 2025 Ayushman Singh. All rights reserved.
           </p>
           <p className="text-sm text-muted-foreground mt-2">
             Built with React, TypeScript, and Tailwind CSS
