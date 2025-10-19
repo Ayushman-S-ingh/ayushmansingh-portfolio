@@ -25,6 +25,7 @@ import { useState } from "react";
 import profileImage from "@/assets/profile.jpg";
 import inventorySystemImage from "@/assets/inventory-system.png";
 import blogCmsImage from "@/assets/blog-cms.png";
+import driverDrowsinessImage from "@/assets/driver-drowsiness.png";
 import emailjs from "@emailjs/browser";
 import { z } from "zod";
 
@@ -111,11 +112,12 @@ const Index = () => {
 
   const projects = [
     {
-      title: "Driver Motion Detector",
+      title: "Driver Drowsiness Detector",
       category: "AI + Computer Vision",
       description: "Real-time drowsiness detection system with Python, OpenCV, and MediaPipe featuring automated alerts for driver safety.",
       tech: ["Python", "OpenCV", "MediaPipe", "Computer Vision"],
       icon: Brain,
+      image: driverDrowsinessImage,
     },
     {
       title: "Inventory & Order Management",
