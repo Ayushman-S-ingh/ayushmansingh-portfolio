@@ -6,7 +6,6 @@ import { Document, Page, pdfjs } from "react-pdf";
 import "react-pdf/dist/Page/AnnotationLayer.css";
 import "react-pdf/dist/Page/TextLayer.css";
 
-
 // Set PDF.js worker
 pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
 
@@ -33,16 +32,17 @@ const Resume = () => {
 
       {/* Resume Viewer */}
       <div className="pt-24 pb-12 px-6">
-        <div className="container mx-auto max-w-5xl bg-card rounded-lg border border-border shadow-lg p-4">
+        <div className="container mx-auto max-w-5xl bg-card rounded-lg border border-border shadow-lg p-4 flex justify-center">
           <Document
-            file="/Ayushman_Singh_Resume.pdf"
+            file={`${import.meta.env.BASE_URL}Ayushman_Singh_Resume.pdf`} // ✅ Correct path for GitHub Pages
             onLoadSuccess={onDocumentLoadSuccess}
+            onLoadError={(error) => console.error("PDF Load Error:", error)}
           >
             {Array.from(new Array(numPages), (el, index) => (
               <Page
                 key={`page_${index + 1}`}
                 pageNumber={index + 1}
-                width={window.innerWidth - 32} // responsive width
+                width={Math.min(window.innerWidth * 0.9, 800)} // responsive width
               />
             ))}
           </Document>
