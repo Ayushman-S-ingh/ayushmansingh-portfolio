@@ -2,22 +2,16 @@ import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react-swc";
 import path from "path";
 
-// https://vitejs.dev/config/
-export default defineConfig(({ mode }) => {
-  return {
-    // Base path: "/" for local dev, "/repo-name/" for GitHub Pages
-    base: mode === "production" ? "/ayushmansingh-portfolio/" : "/",
-    server: {
-      host: "::",      // allows local network access
-      port: 8080,      // dev server port
+export default defineConfig({
+  base: "/ayushmansingh-portfolio/", // fixed base for GitHub Pages
+  server: {
+    port: 8080,
+    host: "::",
+  },
+  plugins: [react()],
+  resolve: {
+    alias: {
+      "@": path.resolve(__dirname, "./src"),
     },
-    plugins: [
-      react(),
-    ],
-    resolve: {
-      alias: {
-        "@": path.resolve(__dirname, "./src"),
-      },
-    },
-  };
+  },
 });
