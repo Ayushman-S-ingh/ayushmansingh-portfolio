@@ -1,54 +1,53 @@
 import { Button } from "@/components/ui/button";
 import { ArrowLeft } from "lucide-react";
 import { useNavigate } from "react-router-dom";
+import { useState } from "react";
+import { Document, Page, pdfjs } from "react-pdf";
+import 'react-pdf/dist/esm/Page/AnnotationLayer.css';
+
+// Set PDF.js worker
+pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
 
 const Resume = () => {
   const navigate = useNavigate();
+  const [numPages, setNumPages] = useState<number | null>(null);
+
+  const onDocumentLoadSuccess = ({ numPages }: { numPages: number }) => {
+    setNumPages(numPages);
+  };
 
   return (
     <div className="min-h-screen bg-background">
       {/* Header with Back Button */}
       <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-lg border-b border-border">
-        <div className="container mx-auto px-6 py-4">
-          <div className="flex items-center justify-between">
-            <h2 className="text-2xl font-bold text-gradient">Resume</h2>
-            <Button
-              variant="outline"
-              onClick={() => navigate("/")}
-              className="gap-2"
-            >
-              <ArrowLeft className="w-4 h-4" />
-              Back to Portfolio
-            </Button>
-          </div>
+        <div className="container mx-auto px-6 py-4 flex items-center justify-between">
+          <h2 className="text-2xl font-bold text-gradient">Resume</h2>
+          <Button variant="outline" onClick={() => navigate("/")} className="gap-2">
+            <ArrowLeft className="w-4 h-4" />
+            Back to Portfolio
+          </Button>
         </div>
       </nav>
 
       {/* Resume Viewer */}
       <div className="pt-24 pb-12 px-6">
-        <div className="container mx-auto max-w-5xl">
-          <div className="bg-card rounded-lg border border-border shadow-lg overflow-hidden">
-            <iframe
-              src="/ayushmansingh-portfolio/Ayushman_Singh_Resume.pdf#toolbar=0&navpanes=0&scrollbar=0"
-              className="w-full h-[calc(100vh-200px)] min-h-[600px]"
-              title="Ayushman Singh Resume"
-              style={{ border: "none" }}
-            />
+        <div className="container mx-auto max-w-5xl bg-card rounded-lg border border-border shadow-lg p-4">
+          <Document
+            file="/Ayushman_Singh_Resume.pdf"
+            onLoadSuccess={onDocumentLoadSuccess}
+          >
+            {Array.from(new Array(numPages), (el, index) => (
+              <Page
+                key={`page_${index + 1}`}
+                pageNumber={index + 1}
+                width={window.innerWidth - 32} // responsive width
+              />
+            ))}
+          </Document>
+        </div>
 
-          </div>
-
-          {/* Fallback link in case iframe doesn't load */}
-          <div className="text-center mt-6 text-sm text-muted-foreground">
-            <p>Viewing resume in read-only mode</p>
-            <a
-              href="./Ayushman_Singh_Resume.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="underline text-blue-600"
-            >
-              Open in a new tab
-            </a>
-          </div>
+        <div className="text-center mt-6 text-sm text-muted-foreground">
+          <p>Viewing resume in read-only mode</p>
         </div>
       </div>
     </div>
