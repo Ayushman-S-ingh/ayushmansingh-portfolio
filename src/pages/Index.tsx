@@ -249,7 +249,7 @@ const Index = () => {
               </p>
               <div className="flex flex-wrap gap-4 pt-4">
                 <Button size="lg" className="gap-2" asChild>
-                  <Link to="/resume">
+                  <Link to="#/resume">
                     <Download className="w-4 h-4" />
                     View Resume
                   </Link>
