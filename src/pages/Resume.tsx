@@ -34,7 +34,7 @@ const Resume = () => {
       <div className="pt-24 pb-12 px-6">
         <div className="container mx-auto max-w-5xl bg-card rounded-lg border border-border shadow-lg p-4 flex justify-center">
           <Document
-            file={`${import.meta.env.BASE_URL}Ayushman_Singh_Resume.pdf`} // ✅ Correct path for GitHub Pages
+            file={`${import.meta.env.BASE_URL}/Ayushman_Singh_Resume.pdf`}
             onLoadSuccess={onDocumentLoadSuccess}
             onLoadError={(error) => console.error("PDF Load Error:", error)}
           >
