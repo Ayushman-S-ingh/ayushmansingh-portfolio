@@ -3,7 +3,9 @@ import { ArrowLeft } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { Document, Page, pdfjs } from "react-pdf";
-import 'react-pdf/dist/esm/Page/AnnotationLayer.css';
+import "react-pdf/dist/Page/AnnotationLayer.css";
+import "react-pdf/dist/Page/TextLayer.css";
+
 
 // Set PDF.js worker
 pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
