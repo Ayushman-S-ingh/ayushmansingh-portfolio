@@ -12,8 +12,8 @@ const Resume = () => {
         <div className="container mx-auto px-6 py-4">
           <div className="flex items-center justify-between">
             <h2 className="text-2xl font-bold text-gradient">Resume</h2>
-            <Button 
-              variant="outline" 
+            <Button
+              variant="outline"
               onClick={() => navigate("/")}
               className="gap-2"
             >
@@ -29,16 +29,24 @@ const Resume = () => {
         <div className="container mx-auto max-w-5xl">
           <div className="bg-card rounded-lg border border-border shadow-lg overflow-hidden">
             <iframe
-              src="/Ayushman_Singh_Resume.pdf#toolbar=0&navpanes=0&scrollbar=0"
+              src="./Ayushman_Singh_Resume.pdf#toolbar=0&navpanes=0&scrollbar=0"
               className="w-full h-[calc(100vh-200px)] min-h-[600px]"
               title="Ayushman Singh Resume"
-              style={{
-                border: 'none',
-              }}
+              style={{ border: "none" }}
             />
           </div>
+
+          {/* Fallback link in case iframe doesn't load */}
           <div className="text-center mt-6 text-sm text-muted-foreground">
             <p>Viewing resume in read-only mode</p>
+            <a
+              href="./Ayushman_Singh_Resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline text-blue-600"
+            >
+              Open in a new tab
+            </a>
           </div>
         </div>
       </div>

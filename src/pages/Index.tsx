@@ -254,14 +254,15 @@ const Index = () => {
                     View Resume
                   </Link> */}
 
-                  <a 
-                    href="/ayushmansingh-portfolio/Ayushman_Singh_Resume.pdf" 
-                    target="_blank" 
+                 <a
+                  href="./Ayushman_Singh_Resume.pdf"   // relative path
+                  target="_blank"
                     rel="noopener noreferrer"
                     className="your-button-class"
-                    >
+                  >
                     <Download className="w-4 h-4" /> View Resume
-                  </a>
+                </a>
+
                 </Button>
                 <Button size="lg" variant="outline" onClick={() => scrollToSection("projects")}>
                   View Portfolio
