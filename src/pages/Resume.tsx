@@ -22,7 +22,7 @@ const Resume = () => {
       <div className="pt-24 pb-12 px-6">
         <div className="container mx-auto max-w-5xl bg-card rounded-lg border border-border shadow-lg p-4 flex justify-center">
           <img
-            src={`${import.meta.env.BASE_URL}Resume.png`}
+            src={`${import.meta.env.BASE_URL}Resume.jpg`}
             alt="Ayushman Singh Resume"
             className="w-full h-auto max-w-full rounded-md"
           />
