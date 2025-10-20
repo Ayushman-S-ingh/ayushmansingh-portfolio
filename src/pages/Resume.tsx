@@ -29,11 +29,12 @@ const Resume = () => {
         <div className="container mx-auto max-w-5xl">
           <div className="bg-card rounded-lg border border-border shadow-lg overflow-hidden">
             <iframe
-              src="./Ayushman_Singh_Resume.pdf#toolbar=0&navpanes=0&scrollbar=0"
+              src="/ayushmansingh-portfolio/Ayushman_Singh_Resume.pdf#toolbar=0&navpanes=0&scrollbar=0"
               className="w-full h-[calc(100vh-200px)] min-h-[600px]"
               title="Ayushman Singh Resume"
               style={{ border: "none" }}
             />
+
           </div>
 
           {/* Fallback link in case iframe doesn't load */}
