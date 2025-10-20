@@ -19,7 +19,9 @@ import {
   MapPin,
   ExternalLink,
   ChevronDown,
-  Loader2
+  Loader2,
+  Menu,
+  X
 } from "lucide-react";
 import { toast } from "@/hooks/use-toast";
 import { useState } from "react";
@@ -53,6 +55,7 @@ const Index = () => {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [errors, setErrors] = useState<Record<string, string>>({});
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -153,6 +156,8 @@ const Index = () => {
         <div className="container mx-auto px-6 py-4">
           <div className="flex items-center justify-between">
             <h2 className="text-2xl font-bold text-gradient">Ayushman Singh</h2>
+            
+            {/* Desktop Navigation */}
             <div className="hidden md:flex items-center gap-8">
               <button onClick={() => scrollToSection("home")} className="hover:text-primary transition-colors">Home</button>
               <button onClick={() => scrollToSection("about")} className="hover:text-primary transition-colors">About</button>
@@ -160,10 +165,65 @@ const Index = () => {
               <button onClick={() => scrollToSection("experience")} className="hover:text-primary transition-colors">Experience</button>
               <button onClick={() => scrollToSection("contact")} className="hover:text-primary transition-colors">Contact</button>
             </div>
-            <Button variant="default" onClick={() => scrollToSection("contact")}>
-              Let's Talk
+            
+            {/* Desktop CTA Button */}
+            <div className="hidden md:block">
+              <Button variant="default" onClick={() => scrollToSection("contact")}>
+                Let's Talk
+              </Button>
+            </div>
+
+            {/* Mobile Menu Button */}
+            <Button 
+              variant="ghost" 
+              size="icon"
+              className="md:hidden"
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            >
+              {mobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </Button>
           </div>
+
+          {/* Mobile Menu */}
+          {mobileMenuOpen && (
+            <div className="md:hidden mt-4 pb-4 border-t border-border pt-4 animate-fade-in">
+              <div className="flex flex-col gap-4">
+                <button 
+                  onClick={() => { scrollToSection("home"); setMobileMenuOpen(false); }} 
+                  className="text-left hover:text-primary transition-colors py-2"
+                >
+                  Home
+                </button>
+                <button 
+                  onClick={() => { scrollToSection("about"); setMobileMenuOpen(false); }} 
+                  className="text-left hover:text-primary transition-colors py-2"
+                >
+                  About
+                </button>
+                <button 
+                  onClick={() => { scrollToSection("projects"); setMobileMenuOpen(false); }} 
+                  className="text-left hover:text-primary transition-colors py-2"
+                >
+                  Projects
+                </button>
+                <button 
+                  onClick={() => { scrollToSection("experience"); setMobileMenuOpen(false); }} 
+                  className="text-left hover:text-primary transition-colors py-2"
+                >
+                  Experience
+                </button>
+                <button 
+                  onClick={() => { scrollToSection("contact"); setMobileMenuOpen(false); }} 
+                  className="text-left hover:text-primary transition-colors py-2"
+                >
+                  Contact
+                </button>
+                <Button variant="default" onClick={() => { scrollToSection("contact"); setMobileMenuOpen(false); }} className="w-full">
+                  Let's Talk
+                </Button>
+              </div>
+            </div>
+          )}
         </div>
       </nav>
 
@@ -189,10 +249,10 @@ const Index = () => {
               </p>
               <div className="flex flex-wrap gap-4 pt-4">
                 <Button size="lg" className="gap-2" asChild>
-                  <a href="/Ayushman_Singh_Resume.pdf" download="Ayushman_Singh_Resume.pdf">
+                  <Link to="/resume">
                     <Download className="w-4 h-4" />
                     View Resume
-                  </a>
+                  </Link>
                 </Button>
                 <Button size="lg" variant="outline" onClick={() => scrollToSection("projects")}>
                   View Portfolio
